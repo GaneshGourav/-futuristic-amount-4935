@@ -1,16 +1,3 @@
-let signupData = JSON.parse(localStorage.getItem("sign")) || []
-let customer = document.getElementById("cust")
-display(signupData)
-
-function display(data) {
-    data.forEach(element => {
-        // customer.textContent = element.name
-    });
-}
-
-
-
-
 // ***************Crousal for top****************
 
 let crousal = document.getElementById("crauosal");

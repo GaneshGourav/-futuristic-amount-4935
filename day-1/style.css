@@ -102,6 +102,10 @@
     cursor: pointer;
 }
 
+#loginsymbol {
+    width: 30px;
+}
+
 .main {
     padding-top: 10px;
     width: 25%;
@@ -477,4 +481,24 @@
 .header-last-text1 {
     font-size: 8px;
     color: white;
+}
+
+#product-container {
+    width: 90%;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+}
+
+#product-container div {
+    width: 100%;
+    border: 1px solid blue;
+    text-align: center;
+    font-size: 9px;
+}
+
+#product-container div img {
+    width: 100%;
+    text-align: center;
 }
