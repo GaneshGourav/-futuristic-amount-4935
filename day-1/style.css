@@ -3,6 +3,7 @@
     margin: 0px;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 .top-nav {
@@ -344,4 +345,136 @@
     margin-left: 20px;
     color: black;
     font-weight: 500;
+}
+
+.header {
+    /* border: 1px solid red; */
+}
+
+.header1 {
+    width: 100%;
+    display: flex;
+    background-color: #3f414d;
+    margin-top: 30px;
+    padding: 5px 20px 5px 20px;
+}
+
+.header1-0 {
+    /* border: 1px solid brown; */
+    width: 40%;
+    text-align: left;
+    padding: 10px 20px 5px 20px;
+}
+
+#headerbtn {
+    padding: 1px 5px 1px 5px;
+    color: white;
+    /* border-color: white; */
+    border: 1px solid white;
+    background-color: #3f414d;
+    margin-left: 10px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#headerinput {
+    border: none;
+    background-color: #3f414d;
+    border-bottom: 1px solid white;
+    width: 50%;
+}
+
+.header1-text {
+    font-size: 8px;
+    color: white;
+    font-weight: 500;
+}
+
+.headersection2 {
+    background-color: #8c8d94;
+}
+
+.header2 {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 30px 20px 30px;
+}
+
+.header2-1 {
+    text-align: left;
+    width: 60%;
+    padding: 10px 20px 10px 20px;
+}
+
+.header2-1-text {
+    font-size: 8px;
+    color: white;
+}
+
+.header2head {
+    font-size: 8px;
+    font-weight: 800;
+    color: white;
+}
+
+.header2-1-text:hover {
+    color: #EE2C34;
+    transition: .3s;
+}
+
+.header3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 70px 50px 70px;
+}
+
+.header3-1 img {
+    width: 30px;
+}
+
+.header3-1-text {
+    font-size: 8px;
+}
+
+.header3-hr {
+    border: .2px solid gray;
+}
+
+.header3-1-1 {
+    display: flex;
+    justify-content: center;
+}
+
+#social {
+    font-size: 8px;
+}
+
+.header-last {
+    justify-content: center;
+    background-color: white;
+    padding-bottom: 30px;
+}
+
+.header-last-text {
+    padding: 10px 10px 10px 10px;
+    font-size: 8px;
+    color: white;
+}
+
+#header-last-1 {
+    display: flex;
+    justify-content: center;
+    background-color: #fc2779;
+}
+
+.terms {
+    display: flex;
+    justify-content: center;
+    background-color: #fc2779;
+    padding-bottom: 10px;
+}
+
+.header-last-text1 {
+    font-size: 8px;
+    color: white;
 }
