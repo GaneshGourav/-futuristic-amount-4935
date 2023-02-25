@@ -1,6 +1,8 @@
 let items = JSON.parse(localStorage.getItem("item")) || []
 console.log(items)
 let cartpage = document.getElementById("cartshow");
+let yourbag = document.getElementById("Yourbag")
+yourbag.textContent = items.length
 
 display(items)
 
@@ -33,11 +35,13 @@ function display(data) {
         incrementbtn.addEventListener("click", () => {
             element = element.quantity++
                 localStorage.setItem("item", JSON.stringify(data))
+            display(data)
         })
         decrementbtn.addEventListener("click", () => {
             if (element.quantity > 1) {
                 element = element.quantity--;
                 localStorage.setItem("item", JSON.stringify(data))
+                display(data)
             }
         })
         Removebtn.addEventListener("click", () => {
@@ -53,11 +57,56 @@ function display(data) {
         cartpage.append(product1);
         product1.append(image, brand, type, price, rating, incrementbtn, quantity, decrementbtn, Removebtn)
     });
-}
+    // }
 
-let sum = 0;
-let bagprice = document.getElementById("bagprice")
-for (let i = 0; i < items.length; i++) {
-    sum += items[i].Price * items[i].quantity
+    let sum = 0;
+    let discountAmount = 0;
+    let shippingAmount = 0;
+    let shippingCharge = document.getElementById("shipping")
+    let discount = document.getElementById("discount")
+    let bagprice = document.getElementById("bagprice")
+    let freeshipping = document.getElementById("freeshipping")
+    let youpay = document.getElementById("yourpay")
+
+    let te = ""
+    for (let i = 0; i < items.length; i++) {
+        sum += items[i].Price * items[i].quantity
+        if (sum <= 500) {
+            shippingAmount = 50;
+            freeshipping.textContent = shippingAmount
+        } else {
+            shippingAmount = 0
+            te = "Free Shipping"
+            freeshipping.textContent = te
+        }
+        shippingCharge.textContent = shippingAmount;
+
+
+        if (sum >= 1000 && sum <= 2000) {
+            discountAmount = Math.floor(sum * .1);
+
+        } else if (sum >= 2001 && sum <= 5000) {
+            discountAmount = Math.floor(sum * .2);
+
+        } else if (sum >= 5001) {
+            discountAmount = Math.floor(sum * .3);
+
+        } else {
+            discountAmount = 0
+
+        }
+
+    }
+
+    let total = 0
+
+    total = (sum + shippingAmount - discountAmount);
+
+
+    console.log(total)
+
+    youpay.textContent = total
+    bagprice.textContent = sum
+    discount.textContent = discountAmount
+
 }
-bagprice.textContent = sum
