@@ -5,11 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CartPage</title>
+    <title>Address page</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+
+    <!-- *************************NavBar Started***************************  -->
     <div class="most-topnav">
         <div class="help">
             <img src="https://img.icons8.com/ios/1x/google-pixel6.png" alt="">
@@ -99,10 +108,6 @@
     </div>
     <hr id="middlenav">
 
-
-
-    <!--  -->
-
     <div class="bottom-nav">
         <!-- <div class="bottomnva-content"> -->
 
@@ -162,7 +167,7 @@
                 <a href="#">Oral Care</a>
                 <a href="#">Face/Skin Tools</a>
                 <a href="#">Massage Tools/a>
-                <a href="#">Foot Care</a>
+            <a href="#">Foot Care</a>
                 <a href="#">Top brands</a>
                 <a href="#">Straighteners</a>
             </div>
@@ -260,44 +265,65 @@
             </div>
         </div>
     </div>
-    <div class="cartbag">
-        <p id="pricedetailsincart">Your favourite Bag Items : <span id="Yourbag"></span></p>
-        <!-- </div> -->
-        <div class="mainincart">
-            <!-- <p>Your favourite Bag Items : <span id="Yourbag"></span></p> -->
-            <div id="cartshow"></div>
-            <div class="rightincart">
-                <h4 id="pricedetailsincart">Price Details</h4>
-                <hr>
-                <p id="Congartulation">Congartulations! You Shipping Charge <span id="freeshipping"></span></p>
-                <hr>
-                <p id="itemsinyour">Items in your bag is included offer discount </p>
-                <div class="priceincart">
-                    <p class="pricedetailsincart">Bag price</p>
-                    <p id="bagprice" class="pricedetailsincart">0</p>
-                </div>
-                <!-- </div> -->
-                <div class="priceincart">
-                    <p class="pricedetailsincart">Discount</p>
-                    <p class="pricedetailsincart" id="discount">0</p>
-                </div>
-                <div class="priceincart">
-                    <p class="pricedetailsincart">Shipping</p>
-                    <p class="pricedetailsincart" id="shipping">0</p>
-                </div>
-                <div class="priceincart">
-                    <h6>You Pay</h6>
 
-                    <H6 id="yourpay">0</H6>
-                </div>
-                <hr>
-                <br>
-                <button id="proceedincart">Proceed</button>
+
+
+    <div class="paymentmain">
+        <div class="forminp">
+            <h4 id="Shipmentadd">Address</h4>
+            <p id="shipmentdetails">Detailed address will help our delivery partner reach your doorstep quickly
+            </p>
+            <div class="rightside">
+
+                <form>
+                    <label for="" class="addressdetailsform">Name</label><br>
+                    <input type="text" class="addressinpu">
+                    <br>
+                    <label for="" class="addressdetailsform">House/Flat/Colony No</label><br>
+
+                    <input type="number" name="" id="" class="addressinpu"><br>
+                    <label for="" class="addressdetailsform">Area/Landmark</label><br>
+                    <input type="text" class="addressinpu"><br>
+                    <label for="" class="addressdetailsform">Pincode</label><br>
+                    <input type="text" class="addressinpu"><br>
+                    <label for="" class="addressdetailsform">Mobile Number</label><br>
+                    <input type="number" class="addressinpu"><br>
+
+                    <button type="submit" id="shipmentbtn">Ship to this address</button>
+
+                </form>
+
             </div>
         </div>
-    </div>
-    </div>
+        <!-- <div class="leftcarddetails">
+            <div class="leftsidecard">
+                <p>Enter your Cards Details</p>
+                <div class="card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/349/349221.png" alt="">
+                    <img src="https://cdn-icons-png.flaticon.com/128/9334/9334540.png" alt="">
+                    <img src="https://cdn-icons-png.flaticon.com/128/349/349230.png" alt="">
+                </div>
+                <div class="cardformdetails">
+                    <form action="">
+                        <label for="text">Name on card</label><br>
+                        <input type="text" class="addressinpu"><br>
+                        <label for="">card Number</label><br>
+                        <input type="number" class="addressinpu"><br>
+
+                        <label for="">Cvv Number</label><br>
+                        <input type="password" class="addressinpu"><br>
+                        <label for="">Expiray Date</label><br>
+                        <input type="datetime-local" class="addressinpu"><br>
+                        <button type="submit" id="cardpaymentbtn">Pay <span id="yourpay"></span></button><br>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div> -->
+
 </body>
-<script src="./cart.js"></script>
+
 
 </html>
