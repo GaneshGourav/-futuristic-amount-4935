@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProductPage</title>
+
+    <link rel="icon" href="//images-static.nykaa.com/media/favicon/default/nykaa_favicon_a.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -49,7 +51,7 @@
 
     <div class="top-nav">
         <div id="left">
-            <h4>Nyakka</h4>
+            <img src="./nyakaa.png" alt="" id="nyakaalogo">
 
             <div class="dropdown">
                 <p class="dropbtn">Brand</p>
@@ -102,13 +104,31 @@
         </div>
         <div class="right-nav">
             <div class="searc">
-                <input type="text" placeholder="search on Nyakka" id="search">
+                <input type="text" placeholder="search on Nykka" id="search">
             </div>
             <div id="signin-btn">
-                <a href="./signup.html"> <button id="signbtn">  Sign in</button> <span id="cust"></span></a>
+
+                <div class="dropdown">
+                    <p class="dropbtn"><span id="customername"></span></p>
+                    <div class="dropdown-content">
+                        <a href="#">Orders</a>
+                        <a href="./profile.html">Profile</a>
+                        <a href="#">Logout</a>
+
+                    </div>
+
+                </div>
             </div>
-            <div id="cart-logo">
-                <img src="https://cdn-icons-png.flaticon.com/128/2567/2567829.png" alt=" ">
+            <div style="display: flex;">
+                <div id="cart-logo">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2567/2567829.png" alt=" " onclick="window
+                    .location.href='cart.html'">
+
+
+                </div>
+                <div>
+                    <span id="cartlogoitem"></span>
+                </div>
             </div>
         </div>
 
@@ -335,7 +355,7 @@
             <select id="sort1">
            
             <option value="">Sort by price</option>
-            <option value="Low to high">Low to high"</option>
+            <option value="Low to high">Low to high</option>
             <option value="High To Low">High To Low</option>
             
         </select>

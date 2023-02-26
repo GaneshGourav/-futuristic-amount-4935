@@ -17,12 +17,13 @@ form.addEventListener("submit", (e) => {
     }
     payment1.push(data);
     localStorage.setItem("payment", JSON.stringify(payment1))
+    window.location.href = "suceesful.html"
 })
 
 btn.addEventListener("click", () => {
     let number = generateOTP()
     console.log(number)
-    alert("otp send to your number")
+    alert("Are you sure to make payment")
 
 })
 
@@ -39,4 +40,11 @@ function generateOTP() {
         OTP += string[Math.floor(Math.random() * len)];
     }
     return OTP;
+}
+let signupData = JSON.parse(localStorage.getItem("sign")) || []
+let customer = document.getElementById("customername")
+
+
+for (let i = 0; i < signupData.length; i++) {
+    customer.textContent = signupData[i].name
 }
