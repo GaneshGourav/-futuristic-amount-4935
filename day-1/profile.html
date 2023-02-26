@@ -5,12 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CartPage</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>ProfilePage</title>
     <link rel="icon" href="//images-static.nykaa.com/media/favicon/default/nykaa_favicon_a.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+
+
+
     <div class="most-topnav">
         <div class="help">
             <img src="https://img.icons8.com/ios/1x/google-pixel6.png" alt="">
@@ -31,6 +41,10 @@
         </div>
 
     </div>
+
+
+
+
 
     <div class="top-nav">
         <div id="left">
@@ -90,7 +104,6 @@
                 <input type="text" placeholder="search on Nykka" id="search">
             </div>
             <div id="signin-btn">
-                <!-- <a href="./signup.html"> <button id="signbtn">  Sign in</button> <span id="cust"></span></a> -->
                 <div class="dropdown">
                     <p class="dropbtn"><span id="customername"></span></p>
                     <div class="dropdown-content">
@@ -102,18 +115,20 @@
 
                 </div>
             </div>
-            <div id="cart-logo">
-                <img src="https://cdn-icons-png.flaticon.com/128/2567/2567829.png" alt=" " onclick="window.location.href='cart.html'">
+            <div style="display: flex;">
+                <div id="cart-logo">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2567/2567829.png" alt=" " onclick="window.location.href='cart.html' ">
 
+
+                </div>
+                <div>
+                    <span id="cartlogoitem"></span>
+                </div>
             </div>
         </div>
 
     </div>
     <hr id="middlenav">
-
-
-
-    <!--  -->
 
     <div class="bottom-nav">
         <!-- <div class="bottomnva-content"> -->
@@ -272,76 +287,66 @@
             </div>
         </div>
     </div>
-    <div class="cartbag">
-        <p id="pricedetailsincart">Your favourite Bag Items : <span id="Yourbag"></span></p>
-        <!-- </div> -->
-        <div class="mainincart">
-            <!-- <p>Your favourite Bag Items : <span id="Yourbag"></span></p> -->
-            <div id="cartshow"></div>
-            <div class="rightincart">
-                <h4 id="pricedetailsincart">Price Details</h4>
-                <hr>
-                <p id="Congratulation">Congratulations! Your Shipping Charge is <span id="freeshipping"></span></p>
-                <hr>
-                <p id="itemsinyour">Items in your bag is included offer discount </p>
-                <div class="priceincart">
-                    <p class="pricedetailsincart">Bag price</p>
-                    <p id="bagprice" class="pricedetailsincart">0</p>
-                </div>
-                <!-- </div> -->
-                <div class="priceincart">
-                    <p class="pricedetailsincart">Discount</p>
-                    <p class="pricedetailsincart" id="discount">0</p>
-                </div>
-                <div class="priceincart">
-                    <p class="pricedetailsincart">Shipping</p>
-                    <p class="pricedetailsincart" id="shipping">0</p>
-                </div>
-                <div class="priceincart">
-                    <h6>You Pay</h6>
 
-                    <H6 id="yourpay">0</H6>
-                </div>
-                <hr>
-                <br>
-                <a href="./address.html"> <button id="proceedincart">Proceed</button></a>
+
+
+
+
+
+
+    <div class="user ">
+
+        <div class="account ">
+            <h2 class="account1 ">My Account</h2>
+            <table>
+                <tr>
+                    <td>MY Dashbboard</td>
+                </tr>
+                <tr>
+                    <td onclick="window.location.href='cart.html' ">MY Orders</td>
+                </tr>
+                <tr>
+                    <td onclick="window.location.href='index.html' "> LogOut</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="user1 ">
+            <div class="pc ">
+                <img src="https://www.dieselindia.com/_nuxt/img/profile.859f7eb.png " alt=" " id="profileimage">
+            </div>
+            <div class="add ">
+                <h6>Profile</h6>
+                <h3 class="heading ">profile Information</h3>
+                <p class="adding ">Name: <span id='yours' class="spancolor"></span></p>
+                <p class="adding ">Email: <span id='mailupdate' class="spancolor"></span></p>
+
+                <p class="adding ">Password: <span id="passkey" class="spancolor">None</span></p>
+
             </div>
         </div>
-    </div>
-    </div>
 
-
-    <!-- *************88Header Section************* -->
-
-    <div class="header">
-        <div class="header1">
-            <div class="header1-0">
-                <p class="header1-text">Get Special discount in your email</p>
-                <form action="">
-                    <input type="text" name="" id="headerinput" placeholder="">
-                    <button type="submit" id="headerbtn">SEND</button>
-                </form>
+        <div class="user1 ">
+            <div class="pc ">
+                <img src="https://www.dieselindia.com/_nuxt/img/addressbook.d722d0f.png " alt=" " id="profileimage">
             </div>
-            <div class="header1-0">
-                <p class="header1-text">Experience the Nykaa Mobile App</p>
-                <img src="" alt="">
+            <div class="add ">
+
+                <h3 class="heading ">MY ADDRESS</h3>
+                <p class="adding ">Name: <span id="namefromaddress" class="spancolor"></span></p>
+                <p class="adding ">Flat No: <span id="flatnofromaddress" class="spancolor"></span></p>
+                <p class="adding ">Area: <span id="areaadd" class="spancolor"></span></p>
+                <p class="adding ">pincode: <span id="pincodefromaddress" class="spancolor"></span></p>
             </div>
-
-            <div class="header1-0">
-                <!-- <img src="https://img.icons8.com/ios/1x/google-pixel6.png" alt=""> -->
-                <p class="header1-text">FOR ANY HELP, YOU MAY CALL AT</p>
-                <p class="header1-text">1800-267-4444</p>
-                <p class="header1-text"> (Monday to Saturday, 8AM to 10PM and Sunday, 10AM to 7PM)</p>
-
-            </div>
-
-
-
-
-
-
         </div>
+
     </div>
+
+
+
+
+
+
 
 
     <div class="headersection2">
@@ -517,7 +522,8 @@
 
 
 
+
 </body>
-<script src="./cart.js"></script>
+<script src="./profile.js"></script>
 
 </html>

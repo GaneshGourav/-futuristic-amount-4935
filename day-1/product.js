@@ -1,6 +1,7 @@
 let product = document.getElementById("product-container")
 
 let length = document.getElementById("totalproduct")
+let cartlogo = document.getElementById("cartlogoitem")
 
 let AllData = []
 
@@ -15,6 +16,7 @@ fetch(API)
         AllData = data
 
         length.textContent = data.length
+
 
     }).catch((error) => {
         console.log(error)
@@ -61,14 +63,26 @@ selectEl1.addEventListener("change", () => {
 
 let sorts = document.getElementById("sort1");
 sorts.addEventListener("change", () => {
-    if (sorts.value == "") {
-        display(AllData)
-    } else {
-        let newsort = AllData.sort((a, b) => { return a - b })
-        display(newsort);
-        console.log(newsort)
+    if (sorts.value == "Low to high") {
+        let sort1 = AllData.sort((a, b) => { return a.Price - b.Price })
+        display(sort1)
+        console.log(sort1)
+    } else if (sorts.value = "High To Low") {
+        let sort2 = AllData.sort((a, b) => { return b.Price - a.Price })
+        display(sort2)
     }
-    // display(newsort)
+
+})
+
+let ratingsort = document.getElementById("sort");
+ratingsort.addEventListener("change", () => {
+    if (ratingsort.value == "Ascending") {
+        let raing1 = AllData.sort((a, b) => { return a.rating - b.rating })
+        display(raing1)
+    } else if (ratingsort.value == "Descending") {
+        let desrating = AllData.sort((a, b) => { return b.rating - a.rating })
+        display(desrating)
+    }
 })
 
 
@@ -111,6 +125,7 @@ function display(data) {
                 items.push({...element, quantity: 1 });
                 localStorage.setItem("item", JSON.stringify(items))
                 alert("Product Added to Cart")
+                cartlogo.textContent = items.length
             }
         })
 
@@ -170,3 +185,10 @@ window.addEventListener("load", function() {
     setInterval(change, 4000);
 
 });
+let signupData = JSON.parse(localStorage.getItem("sign")) || []
+let customer = document.getElementById("customername")
+
+
+for (let i = 0; i < signupData.length; i++) {
+    customer.textContent = signupData[i].name
+}

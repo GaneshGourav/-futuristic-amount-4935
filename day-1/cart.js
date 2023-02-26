@@ -48,8 +48,10 @@ function display(data) {
             let updated = data.filter((ele) => {
                 return element.id != ele.id
             })
+            alert("Are you sure to remove the item?")
             localStorage.setItem("item", JSON.stringify(updated));
             display(updated)
+                // alert("Are you sure to remove the item?")
         })
 
 
@@ -60,6 +62,7 @@ function display(data) {
     // }
 
     let sum = 0;
+    let ourpay = document.getElementById("ourpay")
     let discountAmount = 0;
     let shippingAmount = 0;
     let shippingCharge = document.getElementById("shipping")
@@ -76,7 +79,7 @@ function display(data) {
             freeshipping.textContent = shippingAmount
         } else {
             shippingAmount = 0
-            te = "Free Shipping"
+            te = "FREE"
             freeshipping.textContent = te
         }
         shippingCharge.textContent = shippingAmount;
@@ -108,5 +111,15 @@ function display(data) {
     youpay.textContent = total
     bagprice.textContent = sum
     discount.textContent = discountAmount
+    ourpay.textContent = sum
+    console.log(sum)
 
+
+}
+let signupData = JSON.parse(localStorage.getItem("sign")) || []
+let customer = document.getElementById("customername")
+
+
+for (let i = 0; i < signupData.length; i++) {
+    customer.textContent = signupData[i].name
 }
